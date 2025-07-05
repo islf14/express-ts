@@ -9,7 +9,8 @@ app.get('/', (_req, res) => {
   res.send('Hello World!')
 })
 
-app.use('api/diaries', diaryRouter)
+app.use('/api/diaries', diaryRouter)
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
