@@ -6,7 +6,7 @@ const port = 3000
 app.use(json())
 
 app.get('/', (_req, res) => {
-  res.send('Hello World!')
+  res.send('Welcome to the Diary API!')
 })
 
 app.use('/api/diaries', diaryRouter)
