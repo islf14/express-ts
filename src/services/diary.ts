@@ -1,5 +1,9 @@
 import { DiaryEntry, newDiaryEntry, NonSensitiveInfoDiaryEntry } from '../types'
-import diaryData from './diaries.json'
+
+import fs from 'node:fs'
+const diaryData = JSON.parse(
+  fs.readFileSync('./src/services/diaries.json', 'utf-8')
+)
 
 const diaries: Array<DiaryEntry> = diaryData as Array<DiaryEntry>
 
